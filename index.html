@@ -64,7 +64,18 @@
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br />
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
+
+          <!-- Overlay and modal window for service form -->
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal-form-service scale-up-center">
+              <button class="btn-close-form" type="button" data-modal-close>
+                <svg width="11" height="11">
+                  <use href="./images/icons/icons.svg#icon-cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -128,13 +139,22 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="list-works">
             <li class="item-pic-work">
-              <img src="./images/img1.jpg" alt="Web design" width="370" height="294" />
+              <div class="thumb">
+                <img src="./images/img1.jpg" alt="Web design" width="370" height="294" />
+                <p class="label">Десктопные приложения</p>
+              </div>
             </li>
             <li class="item-pic-work">
-              <img src="./images/img2.jpg" alt="Marketing" width="370" height="294" />
+              <div class="thumb">
+                <img src="./images/img2.jpg" alt="Marketing" width="370" height="294" />
+                <p class="label">Мобильные приложения</p>
+              </div>
             </li>
             <li class="item-pic-work">
-              <img src="./images/img3.jpg" alt="UI/UX design" width="370" height="294" />
+              <div class="thumb">
+                <img src="./images/img3.jpg" alt="UI/UX design" width="370" height="294" />
+                <p class="label">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -455,6 +475,7 @@
         </div>
       </section>
     </main>
+
     <!--Футер-->
     <footer class="footer-section">
       <div class="container footer">
@@ -540,5 +561,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
